@@ -1,12 +1,14 @@
 <?php
 namespace Framework;
 
+use PDO;
+
 class Database {
 	private $_connection;
 	private static $_instance; //The single instance
 	private $_host = "localhost";
-	private $_username = "root";
-	private $_password = "s73f@n";
+	private $_username = "phpframework";
+	private $_password = "framework";
 	private $_database = "robo-party";
 	
         public static function getInstance() {
