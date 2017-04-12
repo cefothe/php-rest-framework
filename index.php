@@ -11,8 +11,10 @@ function AutoLoader($className)
 
 $app = new Framework\Application();
 
-$app->get("test", function () use ($app) {
+$app->get("user/[0-9]+", function () use ($app) {
     
+    $app->response->addData(array("foo" => "bar", 12 => true));
 });
 
-$app->print_route();
+
+$app->run();
